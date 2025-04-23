@@ -15,7 +15,7 @@ const EditNote = () => {
     const updateNote = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`https://tugas5-be-492769942569.us-central1.run.app/note/${id}`, { judul, isi });
+            await axios.patch(`https://be-fawazgaz-492769942569.us-central1.run.app/note/${id}`, { judul, isi });
             navigate("/");
         } catch (error) {
             console.log(error);
@@ -24,7 +24,7 @@ const EditNote = () => {
 
     const getNoteById = async () => {
         try {
-            const response = await axios.get(`https://tugas5-be-492769942569.us-central1.run.app/note/${id}`);
+            const response = await axios.get(`https://be-fawazgaz-492769942569.us-central1.run.app/note/${id}`);
             setJudul(response.data.judul);
             setIsi(response.data.isi);
         } catch (error) {

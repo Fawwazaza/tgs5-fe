@@ -10,7 +10,7 @@ const AddNote = () => {
     const saveNote = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://tugas5-be-492769942569.us-central1.run.app/note', { judul, isi });
+            await axios.post('https://be-fawazgaz-492769942569.us-central1.run.app/note', { judul, isi });
             navigate("/");
         } catch (error) {
             console.log(error);
